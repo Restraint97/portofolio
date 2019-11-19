@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-nav {
+  list-style-type: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+}
+
+.nav-bar_nav-link {
+  display: inline-block;
+  color: white;
+  font-size: large;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+
+.nav-bar_nav-link:hover {
+  background-color: #111;
+}
+
+.header-main {
+  background-image: url(img1.jpg);
+}
+/*# sourceMappingURL=porto.css.map */

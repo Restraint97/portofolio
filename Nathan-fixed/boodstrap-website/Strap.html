@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Strap.css">
+    <script src="./Strap.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark nav-bar">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="head-main pic">
+        <h1 class="head-title">My Portofolio</h1>
+        <p class="head-content">This is my portofolio and here i show you what i can</p>
+        <div class="head-wrapper">
+            <div class="head-card__left">
+                <div class="head-card" id="card1">
+                    <div class="head-card__card">
+                        <!-- Trigger the Modal -->
+                        <img id="myImg1" src="mountain.jpeg" alt="mountain">
+
+                        
+                    </div>
+                </div>
+                <div class="head-card" id="card2" onclick="togglecard2()">
+                    <div class="head-card__card">
+
+                    </div>
+                </div>
+            </div>
+            <div class="head-card__right">
+                <div class="head-card" id="card3" onclick="togglecard3()">
+                    <div class="head-card__card">
+
+                    </div>
+                </div>
+                <div class="head-card" id="card4" onclick="togglecard4()">
+                    <div class="head-card__card">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- The Modal -->
+    <div id="myModal1" class="modal" data-backdrop="false">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption1"></div>
+    </div>
+    <main>
+        <section class="main-main pic">
+            <div class="sect-wrapper">
+                <h1 class="sect-title"></h1>
+                <p class="sect-content"></p>
+            </div>
+        </section>
+    </main>
+    <script src="./Strap.js"></script>
+    <script src="./jquery-3.4.1.js"></script>
+    <script src="/bootstrap-4.3.1-dist/./js/./bootstrap.js"></script>
+</body>
+
+</html>q
