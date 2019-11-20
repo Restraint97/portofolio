@@ -106,7 +106,7 @@ body {
 .flip-card {
   background: transparent;
   width: 320px;
-  height: 520px;
+  height: 480px;
   margin-left: 13rem;
   margin-top: 10rem;
   -webkit-perspective: 1000px;
@@ -114,10 +114,13 @@ body {
 }
 
 .flip-card-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  background-image: url(./img/mountain.jpeg);
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url(./img/nathan.jpg);
+  border-radius: 25%;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -149,37 +152,70 @@ body {
 }
 
 .flip-card-back {
-  background: black;
+  border-radius: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: grey;
   color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.sect-main {
-  background-image: url(./img/pexels-photo-2187315.jpeg);
+.colstyle, .row .col-3, .row .col-6, .row .col-12 {
+  border: 1px solid grey;
+  background-color: beige;
+  height: 200px;
+  width: 100px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12%;
+          flex: 0 0 12%;
+  -webkit-transition: -webkit-box-flex 2s;
+  transition: -webkit-box-flex 2s;
+  transition: flex 2s;
+  transition: flex 2s, -webkit-box-flex 2s, -ms-flex 2s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
-.sect-main .block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid black;
-  background-color: white;
-  width: 50rem;
-  height: 200px;
+.row {
+  margin: 0;
 }
 
-.sect-main .block2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: white;
-  width: 50rem;
-  height: 200px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 1px solid black;
+.row:hover .col-3:hover {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  color: black;
+  z-index: 10;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.row:hover:nth-child(2) .col-6:hover {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  color: black;
+  z-index: 10;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.row:hover:nth-child(3) .col-12:hover {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  color: black;
+  z-index: 10;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 /*# sourceMappingURL=index.css.map */
