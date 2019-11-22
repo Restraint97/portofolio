@@ -13,38 +13,23 @@ body {
   background-repeat: no-repeat;
 }
 
-.nav-bar {
-  z-index: 1;
-  margin: 0;
+.pics {
+  height: 40rem;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
-  position: fixed;
-  width: 100%;
+  z-index: 99;
 }
 
-.nav-bar-nav {
-  list-style-type: none;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  background-color: #333;
-  width: 100%;
-}
-
-.nav-bar_nav-link {
-  display: inline-block;
-  color: white;
-  font-size: large;
-  padding: 1rem 1rem;
-  text-decoration: none;
-}
-
-.nav-bar_nav-link:hover {
-  text-decoration: none;
-  background-color: black;
-  color: white;
+.navbar-nav {
+  margin: 0 auto;
 }
 
 .header-main-bg {
@@ -81,9 +66,10 @@ body {
 }
 
 .header-main_item {
-  margin-left: 10rem;
-  margin-top: 10rem;
-  width: 500px;
+  position: relative;
+  left: 2.2rem;
+  top: 10rem;
+  width: 609px;
   height: 500px;
 }
 
@@ -96,30 +82,42 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 4rem;
-  margin: 0;
+  margin-left: -4.4rem;
 }
 
-.header-main_title_content {
-  font-family: monospace;
+.sect-flip-card {
+  background-image: url(./img/gate.jpeg);
 }
 
-.flip-card {
+.container {
+  position: relative;
+  top: 6%;
+}
+
+.container .sect-flip-card__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .sect-flip-card__wrapper .flip-card {
   background: transparent;
-  width: 320px;
-  height: 480px;
-  margin-left: 13rem;
-  margin-top: 10rem;
+  width: 318px;
+  height: 475px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 
-.flip-card-inner {
+.container .sect-flip-card__wrapper .flip-card-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  border: 2px solid black;
   background-image: url(./img/nathan.jpg);
-  border-radius: 25%;
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -135,24 +133,23 @@ body {
           box-shadow: 0 4px 8px 0 black;
 }
 
-.flip-card:hover .flip-card-inner {
+.container .sect-flip-card__wrapper .flip-card:hover .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.flip-card-front .flip-card-back {
+.container .sect-flip-card__wrapper .flip-card-front .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.flip-card-front {
+.container .sect-flip-card__wrapper .flip-card-front {
   background-color: #bbb;
   color: black;
 }
 
-.flip-card-back {
-  border-radius: 25%;
+.container .sect-flip-card__wrapper .flip-card-back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,59 +160,123 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: grey;
-  color: white;
+  background-color: ivory;
+  color: black;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.colstyle, .row .col-3, .row .col-6, .row .col-12 {
-  border: 1px solid grey;
-  background-color: beige;
-  height: 200px;
-  width: 100px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 12%;
-          flex: 0 0 12%;
-  -webkit-transition: -webkit-box-flex 2s;
-  transition: -webkit-box-flex 2s;
-  transition: flex 2s;
-  transition: flex 2s, -webkit-box-flex 2s, -ms-flex 2s;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+.sect-flip-card__picture {
+  margin-left: 34rem;
 }
 
-.row {
-  margin: 0;
+.sect-flip-card__block {
+  margin: 2rem;
+  border: 2px solid black;
+  -webkit-box-shadow: 0 4px 8px 0 black;
+          box-shadow: 0 4px 8px 0 black;
+  background-color: #fffff555;
+  width: 400px;
+  height: 400px;
 }
 
-.row:hover .col-3:hover {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
+.sect-flip-card__title {
+  margin: 1rem;
+  text-align: center;
+}
+
+.sect-flip-card__content {
+  margin: 1rem;
+  text-align: center;
+}
+
+.skill-grid {
+  background-image: url(./img/gate.jpeg);
+}
+
+.skill-grid .container {
+  position: relative;
+  top: 5%;
+}
+
+.skill-grid .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill-grid .skill-grid__block {
+  margin: 1rem;
+  border: 2px solid black;
+  width: 400px;
+  height: 400px;
+  -webkit-box-shadow: 0 4px 8px 0 black;
+          box-shadow: 0 4px 8px 0 black;
+}
+
+.skill-grid .skill-grid__block:nth-child(1) {
+  background-color: #fffff555;
+}
+
+.skill-grid .skill-grid__block:nth-child(2) {
+  background-color: #fffff5cb;
+}
+
+.skill-grid .skill-grid__block:nth-child(3) {
+  background-color: #fffff555;
+}
+
+.skill-grid .skill-grid__block:nth-child(4) {
+  background-color: #fffff555;
+}
+
+.skill-grid .skill-grid__block:nth-child(5) {
+  height: 600px;
+  background-color: #fffff5cb;
+}
+
+.skill-grid .skill-grid__block:nth-child(6) {
+  background-color: #fffff555;
+}
+
+.skill-grid__title {
+  margin: 1rem;
+  text-align: center;
+}
+
+.skill-grid__content {
+  margin: 1rem;
+  text-align: center;
+}
+
+.skill-grid .progress {
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+.skill-grid .progress-bar {
+  background-color: black;
+}
+
+.page-footer {
+  background-image: url(./img/gate.jpeg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.page-footer .row {
+  background-color: #fffff555;
+}
+
+.page-footer .list-unstyled li {
   color: black;
-  z-index: 10;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.row:hover:nth-child(2) .col-6:hover {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
-  color: black;
-  z-index: 10;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.row:hover:nth-child(3) .col-12:hover {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
-  color: black;
-  z-index: 10;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,174 +1,215 @@
-    // * {
-    //     border: 1px solid red;
-    // }
-    html {
-        scroll-behavior: smooth;
+// * {
+//     border: 1px solid red;
+// }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.pic {
+    height: 70rem;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pics {
+    height: 40rem;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    &-nav {
+        margin: 0 auto;
     }
-    
-    body {
-        margin: 0;
+}
+
+.header-main-bg {
+    background-image: url(./img/gate.jpeg);
+}
+
+.container {
+    max-width: 100%;
+}
+
+.header-main {
+    width: 100%;
+    &_content {
+        display: flex;
+        justify-content: space-evenly;
     }
-    
-    .pic {
-        height: 70rem;
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
+    &__profile {
+        flex: 1;
     }
-    
-    .nav-bar {
-        z-index: 1;
-        margin: 0;
-        top: 0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-        &-nav {
-            list-style-type: none;
-            margin: 0;
-            display: flex;
-            padding: 0;
-            background-color: #333;
-            width: 100%;
-            // overflow: auto;
-        }
-        &_nav-link {
-            display: inline-block;
-            color: white;
-            font-size: large;
-            padding: 1rem 1rem;
-            text-decoration: none;
-        }
-        &_nav-link:hover {
-            text-decoration: none;
-            background-color: black;
-            color: white;
-        }
+    &__picture {
+        flex: 1;
     }
-    
-    .header-main-bg {
-        background-image: url(./img/gate.jpeg);
+    &_item {
+        position: relative;
+        left: 2.2rem;
+        top: 10rem;
+        width: 609px;
+        height: 500px;
     }
-    
-    .container {
-        max-width: 100%;
+    &_title {
+        display: flex;
+        font-family: monospace;
+        justify-content: center;
+        font-size: 4rem;
+        margin-left: -4.4rem;
     }
-    
-    .header-main {
-        width: 100%;
-        &_content {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        &__profile {
-            flex: 1;
-        }
-        &__picture {
-            flex: 1;
-        }
-        &_item {
-            margin-left: 10rem;
-            margin-top: 10rem;
-            width: 500px;
-            height: 500px;
-        }
-        &_title {
-            display: flex;
-            font-family: monospace;
-            justify-content: center;
-            font-size: 4rem;
-            margin: 0;
-            &_content {
-                font-family: monospace;
+}
+
+.sect-flip-card {
+    background-image: url(./img/gate.jpeg);
+}
+
+.container {
+    position: relative;
+    top: 6%;
+    .sect-flip-card__wrapper {
+        display: flex;
+        justify-content: space-between;
+        .flip-card {
+            background: transparent;
+            width: 318px;
+            height: 475px;
+            perspective: 1000px;
+            &-inner {
+                display: flex;
+                position: relative;
+                border: 2px solid black;
+                background-image: url(./img/nathan.jpg);
+                // border-radius: 5%;
+                // background-attachment: fixed;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 1.5s;
+                transform-style: preserve-3d;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 12);
+            }
+            &:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+            &-front .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            &-front {
+                background-color: #bbb;
+                color: black;
+            }
+            &-back {
+                // border-radius: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: ivory;
+                color: black;
+                transform: rotateY(180deg);
             }
         }
     }
-    
-    .flip-card {
-        background: transparent;
-        width: 320px;
-        height: 480px;
-        margin-left: 13rem;
-        margin-top: 10rem;
-        perspective: 1000px;
-        &-inner {
-            display: flex;
-            position: relative;
-            background-image: url(./img/nathan.jpg);
-            border-radius: 25%;
-            // background-attachment: fixed;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 1.5s;
-            transform-style: preserve-3d;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 12);
-        }
-        &:hover &-inner {
-            transform: rotateY(180deg);
-        }
-        &-front &-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        &-front {
-            background-color: #bbb;
-            color: black;
-        }
-        &-back {
-            border-radius: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            background-color: grey;
-            color: white;
-            transform: rotateY(180deg);
-        }
+}
+
+.sect-flip-card__picture {
+    margin-left: 34rem;
+}
+
+.sect-flip-card__block {
+    margin: 2rem;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 12);
+    background-color: #fffff555;
+    width: 400px;
+    height: 400px;
+}
+
+.sect-flip-card__title {
+    margin: 1rem;
+    text-align: center;
+}
+
+.sect-flip-card__content {
+    margin: 1rem;
+    text-align: center;
+}
+
+.skill-grid {
+    background-image: url(./img/gate.jpeg);
+    .container {
+        position: relative;
+        top: 5%;
     }
-    
-    .colstyle {
-        border: 1px solid grey;
-        background-color: beige;
-        height: 200px;
-        width: 100px;
-        flex: 0 0 12%;
-        transition: flex 2s;
-        transform-origin: top left;
-    }
-    
     .row {
-        margin: 0;
-        .col-3 {
-            @extend .colstyle;
+        display: flex;
+        justify-content: center;
+    }
+    .skill-grid__block {
+        margin: 1rem;
+        border: 2px solid black;
+        width: 400px;
+        height: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 12);
+        &:nth-child(1) {
+            background-color: #fffff555;
         }
-        .col-6 {
-            @extend .colstyle;
+        &:nth-child(2) {
+            background-color: #fffff5cb;
         }
-        .col-12 {
-            @extend .colstyle;
+        &:nth-child(3) {
+            background-color: #fffff555;
+        }
+        &:nth-child(4) {
+            background-color: #fffff555;
+        }
+        &:nth-child(5) {
+            // margin: 0;
+            height: 600px;
+            background-color: #fffff5cb;
+        }
+        &:nth-child(6) {
+            background-color: #fffff555;
         }
     }
-    
-    .row:hover .col-3:hover {
-        flex: 0 0 24%;
-        color: black;
-        z-index: 10;
-        transform-origin: top left;
+    &__title {
+        margin: 1rem;
+        text-align: center;
     }
-    
-    .row:hover:nth-child(2) .col-6:hover {
-        flex: 0 0 24%;
-        color: black;
-        z-index: 10;
-        transform-origin: top left;
+    &__content {
+        margin: 1rem;
+        text-align: center;
     }
-    
-    .row:hover:nth-child(3) .col-12:hover {
-        flex: 0 0 24%;
-        color: black;
-        z-index: 10;
-        transform-origin: top left;
+    .progress {
+        margin-left: 7rem;
+        margin-right: 7rem;
+        &-bar {
+            background-color: black;
+        }
     }
+}
+
+.page-footer {
+    background-image: url(./img/gate.jpeg);
+    display: flex;
+    flex-direction: column-reverse;
+    .row {
+        background-color: #fffff555;
+    }
+    .list-unstyled li {
+        color: black;
+    }
+}
